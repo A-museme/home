@@ -6,13 +6,13 @@ categories: projects
 ---
 
 <details>
-<summary><strong>Code Deep Dive & Insights -- Expand Me</strong></summary>
+<summary><strong>Click to expand!</strong></summary>
 
 ### 1. **Regular Expression for Phone Numbers**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
-```
+</code></pre>
 
 - **What It Does**: This line defines a **regular expression (regex)** to identify phone numbers in various common formats. 
 - **Explanation**:
@@ -27,16 +27,16 @@ const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
 
 ### 2. **Set to Track Processed Elements**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 let processedElements = new Set();
-```
+</code></pre>
 
 - **What It Does**: This line initializes a **Set** to keep track of elements that have already been processed.
 - **Why It Matters**: It prevents duplicate buttons from being added next to phone numbers that have already been tagged.
 
 ### 3. **Parsing Visible Text Content**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 function parseVisibleTextContent() {
     let textNodes = [];
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
@@ -51,7 +51,7 @@ function parseVisibleTextContent() {
     }
     return textNodes;
 }
-```
+</code></pre>
 
 - **What It Does**: This function uses a **TreeWalker** to find all visible text nodes in the document.
 - **Key Concepts**:
@@ -62,19 +62,19 @@ function parseVisibleTextContent() {
 
 ### 4. **Check for Existing Phone Buttons**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 function phoneNumberAlreadyTagged(node, phoneNumber) {
     const nextSibling = node.nextSibling;
     return nextSibling && nextSibling.nodeName === "BUTTON" && nextSibling.title.includes(phoneNumber);
 }
-```
+</code></pre>
 
 - **What It Does**: This function checks if there is already a button next to the detected phone number.
 - **Why It Matters**: It ensures we don’t add multiple buttons next to the same phone number.
 
 ### 5. **Creating the Phone Button**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 function createPhoneButtonInline(phoneNumber, node) {
     if (!node || processedElements.has(node)) return;
 
@@ -88,7 +88,7 @@ function createPhoneButtonInline(phoneNumber, node) {
     processedElements.add(node);
     console.log(`[PhoneDetection] Injected button for: ${phoneNumber}`);
 }
-```
+</code></pre>
 
 - **What It Does**: This function creates and injects a button next to the detected phone number in the DOM.
 - **Key Concepts**:
@@ -99,7 +99,7 @@ function createPhoneButtonInline(phoneNumber, node) {
 
 ### 6. **Detecting Phone Numbers**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 function detectPhoneNumbers() {
     console.log("[PhoneDetection] Scanning for phone numbers...");
     const textNodes = parseVisibleTextContent();
@@ -113,7 +113,7 @@ function detectPhoneNumbers() {
     });
     console.log("[PhoneDetection] Phone number scan complete.");
 }
-```
+</code></pre>
 
 - **What It Does**: This function scans for phone numbers in the text nodes and creates buttons for them.
 - **Key Concepts**:
@@ -122,14 +122,14 @@ function detectPhoneNumbers() {
 
 ### 7. **Initial Scan and Mutation Observer**
 
-```javascript
+<pre class="notranslate"><code class="notranslate">
 detectPhoneNumbers();
 
 const observer = new MutationObserver(mutations => {
     detectPhoneNumbers();
 });
 observer.observe(document.body, { childList: true, subtree: true });
-```
+</code></pre>
 
 - **What It Does**: The initial call to `detectPhoneNumbers()` scans the page for phone numbers when the extension is loaded. 
 - **MutationObserver**: This observes changes in the DOM (e.g., when new content is loaded) and triggers a re-scan to find newly added phone numbers.

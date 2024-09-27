@@ -6,12 +6,14 @@ categories: projects
 ---
 
 <div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);">
+    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); display: inline;">
         Code Deep Dive & Insights
     </h2>
-    <div class="collapsible-content" style="display: none;">
+    <button class="expand-button" style="margin-left: 10px; background-color: transparent; border: none; color: red; cursor: pointer; font-size: 16px;">
+        Expand <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">
+    </button>
+    <div class="collapsible-content" style="display: none; overflow: hidden; transition: max-height 0.3s ease; max-height: 0;">
         <p>
-            <!-- Paste your Markdown content here -->
             Here you can add your code insights, explanations, and more. For example:
         </p>
         <pre><code>
@@ -40,18 +42,38 @@ function exampleFunction() {
     padding: 10px;
     border-top: 1px solid #ccc; /* Border on top of content */
 }
+
+/* Animation for expanding/collapsing */
+.collapsible-content.open {
+    max-height: 500px; /* Arbitrary high value to allow smooth animation */
+    transition: max-height 0.5s ease-in-out;
+}
+
+.collapsible-content.closed {
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+}
 </style>
 
 <script>
     // Script to handle the collapsible functionality
-    document.querySelectorAll('.collapsible-header').forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
+    document.querySelectorAll('.expand-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const content = this.parentNode.querySelector('.collapsible-content');
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                content.classList.remove('open');
+                content.classList.add('closed');
+                this.innerHTML = 'Expand <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">'; // Change text to Expand
+            } else {
+                content.style.display = "block";
+                content.classList.remove('closed');
+                content.classList.add('open');
+                this.innerHTML = 'Collapse <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">'; // Change text to Collapse
+            }
         });
     });
 </script>
-
 
 
 # VoIP Chrome Extension with CRM Integration

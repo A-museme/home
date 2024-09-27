@@ -6,128 +6,31 @@ categories: projects
 ---
 
 <div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);">
-        Code Deep Dive & Insights
-    </h2>
-    <button class="expand-button" style="background-color: #ccc; color: green; border: none; cursor: pointer; padding: 8px 12px; border-radius: 4px;">
+    <button class="collapsible-button" style="background-color: grey; color: green; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">
         Open Code Review
     </button>
-    <div class="collapsible-content" style="display: none; overflow: hidden; transition: max-height 0.3s ease; max-height: 0;">
+    <div class="collapsible-content" style="display: none; overflow: hidden; transition: max-height 0.3s ease-out;">
         <p>Sure! Let's break down the provided JavaScript code step by step in an educational manner, ideal for someone new to programming. We'll highlight the key concepts and functionalities.</p>
 
         <h3>1. <strong>Regular Expression for Phone Numbers</strong></h3>
         <pre><code>const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;</code></pre>
         <p><strong>What It Does</strong>: This line defines a <strong>regular expression (regex)</strong> to identify phone numbers in various common formats.</p>
-        <p><strong>Explanation</strong>:</p>
-        <ul>
-            <li><code>\+?</code>: Matches an optional plus sign (for international codes).</li>
-            <li><code>1[-.\s]?</code>: Matches the country code for the U.S. (optional) followed by a separator (dash, dot, or space).</li>
-            <li><code>\(?\d{3}\)?</code>: Matches an area code (3 digits), which can be enclosed in parentheses.</li>
-            <li><code>[-.\s]</code>: Matches a separator (dash, dot, or space).</li>
-            <li><code>\d{3}</code>: Matches the next 3 digits.</li>
-            <li><code>[-.\s]</code>: Matches another separator.</li>
-            <li><code>\d{4}</code>: Matches the final 4 digits of the phone number.</li>
-        </ul>
-        <p><strong>Result</strong>: The regex can match numbers like <code>123-456-7890</code>, <code>(123) 456-7890</code>, and <code>+1 123 456 7890</code>.</p>
-
-        <h3>2. <strong>Set to Track Processed Elements</strong></h3>
-        <pre><code>let processedElements = new Set();</code></pre>
-        <p><strong>What It Does</strong>: This line initializes a <strong>Set</strong> to keep track of elements that have already been processed.</p>
-        <p><strong>Why It Matters</strong>: It prevents duplicate buttons from being added next to phone numbers that have already been tagged.</p>
-
-        <h3>3. <strong>Parsing Visible Text Content</strong></h3>
-        <pre><code>function parseVisibleTextContent() { ... }</code></pre>
-        <p><strong>What It Does</strong>: This function uses a <strong>TreeWalker</strong> to find all visible text nodes in the document.</p>
-        <p><strong>Key Concepts</strong>:</p>
-        <ul>
-            <li><code>document.createTreeWalker</code>: Creates a walker to traverse nodes in the DOM.</li>
-            <li><code>NodeFilter.SHOW_TEXT</code>: Filters to show only text nodes.</li>
-            <li><code>acceptNode</code>: Checks if the parent of the node is visible (i.e., <code>offsetParent !== null</code>).</li>
-        </ul>
-        <p><strong>Outcome</strong>: The function returns an array of text nodes that are currently visible on the page.</p>
-
-        <h3>4. <strong>Check for Existing Phone Buttons</strong></h3>
-        <pre><code>function phoneNumberAlreadyTagged(node, phoneNumber) { ... }</code></pre>
-        <p><strong>What It Does</strong>: This function checks if there is already a button next to the detected phone number.</p>
-        <p><strong>Why It Matters</strong>: It ensures we don’t add multiple buttons next to the same phone number.</p>
-
-        <h3>5. <strong>Creating the Phone Button</strong></h3>
-        <pre><code>function createPhoneButtonInline(phoneNumber, node) { ... }</code></pre>
-        <p><strong>What It Does</strong>: This function creates and injects a button next to the detected phone number in the DOM.</p>
-        <p><strong>Key Concepts</strong>:</p>
-        <ul>
-            <li><strong>Create Elements</strong>: Uses <code>document.createElement</code> to create a <code>span</code> and an <code>img</code> for the button.</li>
-            <li><strong>Styling</strong>: Applies CSS styles to position the button relative to the phone number.</li>
-            <li><strong>Event Listeners</strong>: Sets up <code>mouseover</code> and <code>mouseout</code> events to change the button’s appearance.</li>
-            <li><strong>Functionality</strong>: On clicking the button, it sends a message to the Chrome extension to handle a phone lead.</li>
-        </ul>
-
-        <h3>6. <strong>Detecting Phone Numbers</strong></h3>
-        <pre><code>function detectPhoneNumbers() { ... }</code></pre>
-        <p><strong>What It Does</strong>: This function scans for phone numbers in the text nodes and creates buttons for them.</p>
-        <p><strong>Key Concepts</strong>:</p>
-        <ul>
-            <li><strong>Logging</strong>: Uses <code>console.log</code> to indicate the start and end of the scanning process.</li>
-            <li><strong>Match Phone Numbers</strong>: Uses the regex to find and process detected phone numbers.</li>
-        </ul>
-
-        <h3>7. <strong>Initial Scan and Mutation Observer</strong></h3>
-        <pre><code>detectPhoneNumbers(); ...</code></pre>
-        <p><strong>What It Does</strong>: The initial call to <code>detectPhoneNumbers()</code> scans the page for phone numbers when the extension is loaded.</p>
-        <p><strong>MutationObserver</strong>: This observes changes in the DOM (e.g., when new content is loaded) and triggers a re-scan to find newly added phone numbers.</p>
-        <p><strong>Why It Matters</strong>: This ensures that dynamically loaded content (like AJAX calls) is also checked for phone numbers.</p>
-
-        <h3>Summary</h3>
-        <p>This code allows a Chrome extension to detect phone numbers on a webpage, injects clickable buttons next to them, and manages interactions with those buttons.</p>
-        <p>The use of regex, DOM manipulation, and event handling demonstrates core JavaScript concepts and the power of browser extensions in enhancing user interactions.</p>
+        
+        <!-- Continue adding your sections here -->
+        
     </div>
 </div>
 
-<style>
-.collapsible-section .collapsible-header {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f0f0f0; /* Light gray background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px 0; /* Space between sections */
-}
-
-.collapsible-section .collapsible-content {
-    padding: 10px;
-    border-top: 1px solid #ccc; /* Border on top of content */
-}
-
-/* Animation for expanding/collapsing */
-.collapsible-content.open {
-    max-height: 500px; /* Arbitrary high value to allow smooth animation */
-    transition: max-height 0.5s ease-in-out;
-}
-
-.collapsible-content.closed {
-    max-height: 0;
-    transition: max-height 0.5s ease-in-out;
-}
-</style>
-
 <script>
-    // Script to handle the collapsible functionality
-    document.querySelector('.expand-button').addEventListener('click', function() {
-        const content = this.parentNode.querySelector('.collapsible-content');
-        if (content.style.display === "block") {
-            content.style.display = "none";
-            content.classList.remove('open');
-            content.classList.add('closed');
-            this.innerHTML = 'Open Code Review'; // Change text to Open Code Review
-        } else {
-            content.style.display = "block";
-            content.classList.remove('closed');
-            content.classList.add('open');
-            this.innerHTML = 'Close Code Review'; // Change text to Close Code Review
-        }
+    const collapsibleButtons = document.querySelectorAll('.collapsible-button');
+    
+    collapsibleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
     });
 </script>
-
 
 # VoIP Chrome Extension with CRM Integration
 

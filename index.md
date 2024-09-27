@@ -1,8 +1,3 @@
----
-layout: page
-title: Portfolio
----
-
 # Portfolio
 
 Welcome to my portfolio! Below is a collection of my featured projects, skills, and contact information.

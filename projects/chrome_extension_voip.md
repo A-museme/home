@@ -5,12 +5,14 @@ date: 2024-09-27
 categories: projects
 ---
 
-<div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); cursor: pointer;">
-        Code Deep Dive & Insights
-    </h2>
-    <div class="collapsible-content" style="display: none;">
-        <p>
+
+# VoIP Chrome Extension with CRM Integration
+
+## Code Deep Dive & Insights
+
+<details>
+<summary>Click to expand!</summary>
+
 ### 1. **Regular Expression for Phone Numbers**
 ```javascript
 const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
@@ -127,35 +129,8 @@ observer.observe(document.body, { childList: true, subtree: true });
 ### Summary
 - This code allows a Chrome extension to detect phone numbers on a webpage, injects clickable buttons next to them, and manages interactions with those buttons. 
 - The use of regex, DOM manipulation, and event handling demonstrates core JavaScript concepts and the power of browser extensions in enhancing user interactions.
-        </p>
-    </div>
-</div>
+</details>
 
-<style>
-.collapsible-section .collapsible-header {
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f0f0f0; /* Light gray background */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    margin: 5px 0; /* Space between sections */
-}
-
-.collapsible-section .collapsible-content {
-    padding: 10px;
-    border-top: 1px solid #ccc; /* Border on top of content */
-}
-</style>
-
-<script>
-    // Script to handle the collapsible functionality
-    document.querySelectorAll('.collapsible-header').forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        });
-    });
-</script>
 
 # VoIP Chrome Extension with CRM Integration
 

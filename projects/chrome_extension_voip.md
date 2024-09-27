@@ -4,6 +4,7 @@ title: "VoIP Chrome Extension with CRM Integration"
 date: 2024-09-27
 categories: projects
 ---
+
 <details>
 <summary><strong>Code Deep Dive & Insights -- Expand Me</strong></summary>
 

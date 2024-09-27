@@ -6,7 +6,7 @@ categories: projects
 ---
 
 <div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);">
+    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); cursor: pointer;">
         Code Deep Dive & Insights
     </h2>
     <div class="collapsible-content" style="display: none;">
@@ -158,7 +158,6 @@ observer.observe(document.body, { childList: true, subtree: true });
         });
     });
 </script>
-
 
 # VoIP Chrome Extension with CRM Integration
 

@@ -6,9 +6,6 @@ categories: projects
 ---
 
 <div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);">
-        Code Deep Dive & Insights
-    </h2>
     <button class="expand-button" style="background-color: #ccc; color: green; border: none; cursor: pointer; padding: 8px 12px; border-radius: 4px;">
         Open Code Review
     </button>

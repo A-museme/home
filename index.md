@@ -1,53 +1,44 @@
-<details>
-  <summary><strong>Skills</strong></summary>
-  
-  - Python
-  - JavaScript
-  - Node.js
-  - HTML & CSS
-  - API Integration
-  - Cloud Services
-  
-  More skills content can go here...
-  
-</details>
+### Skills
+> "A range of technical and soft skills that I've developed through years of experience in the tech industry."
+>
+> - **Languages:** Python, JavaScript, Node.js, HTML & CSS
+> - **Frameworks & Tools:** API Integration, Cloud Services (AWS, GCP)
+> - **Sales & Marketing:** Salesforce, HubSpot, Automated Email Campaigns
 
-<details>
-  <summary><strong>Experience</strong></summary>
-  
-  - Lead Developer at Startup Hubs, San Francisco (2015 - Present)
-  - Senior Software Engineer at Google, London (2014 - 2015)
-  - UI Developer at Amazon, London (2012 - 2014)
-  
-  Add more experience details and descriptions here...
+---
 
-</details>
+### Experience
+> "Over a decade of hands-on experience in top tech companies and startups, solving complex problems and building scalable solutions."
+>
+> **Lead Developer** - *Startup Hubs, San Francisco* (2015 - Present)  
+> **Senior Software Engineer** - *Google, London* (2014 - 2015)  
+> **UI Developer** - *Amazon, London* (2012 - 2014)  
+> 
+> *(Click to expand for more detailed descriptions)*
 
-<details>
-  <summary><strong>Projects</strong></summary>
-  
-  - SaaS Application Development
-  - AI Agentic Workflow Automation
-  - Machine Learning Model Deployment
-  
-  You can expand with project details, links to repos, and screenshots here...
-  
-</details>
+---
 
-<details>
-  <summary><strong>About Me</strong></summary>
-  
-  A brief bio about your background, career journey, and professional passions. You can insert more detailed information here later...
+### Projects
+> "From developing SaaS applications to automating agentic workflows using AI, here are a few of the projects I'm most proud of."
+>
+> - **SaaS Application Development**
+> - **AI Agent Workflow Automation**
+> - **ML Model Deployment**  
+>  
+> *(More project details, repos, and live demos coming soon!)*
 
-</details>
+---
 
-<details>
-  <summary><strong>Contact Me</strong></summary>
-  
-  - Email: your.email@example.com
-  - LinkedIn: [Your LinkedIn](https://www.linkedin.com)
-  - Twitter: [Your Twitter](https://twitter.com)
+### About Me
+> "I’m passionate about building innovative solutions that drive business growth, with a focus on scaling SaaS applications."
+>  
+> With a background in web development and cloud services, I’ve worked at some of the biggest names in tech, and now focus on SaaS products and AI-driven solutions.
 
-  Add contact information, social links, or forms here...
-  
-</details>
+---
+
+### Contact Me
+> "Feel free to reach out to me via the platforms below."
+>  
+> - **Email:** your.email@example.com  
+> - **LinkedIn:** [Your LinkedIn](https://www.linkedin.com)  
+> - **Twitter:** [Your Twitter](https://twitter.com)

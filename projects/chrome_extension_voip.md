@@ -6,11 +6,11 @@ categories: projects
 ---
 
 <div class="collapsible-section">
-    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); display: inline;">
+    <h2 class="collapsible-header" style="color: red; font-weight: bold; text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);">
         Code Deep Dive & Insights
     </h2>
-    <button class="expand-button" style="margin-left: 10px; background-color: transparent; border: none; color: red; cursor: pointer; font-size: 16px;">
-        Expand <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">
+    <button class="expand-button" style="background-color: #ccc; color: green; border: none; cursor: pointer; padding: 8px 12px; border-radius: 4px;">
+        Open Code Review
     </button>
     <div class="collapsible-content" style="display: none; overflow: hidden; transition: max-height 0.3s ease; max-height: 0;">
         <p>
@@ -57,21 +57,19 @@ function exampleFunction() {
 
 <script>
     // Script to handle the collapsible functionality
-    document.querySelectorAll('.expand-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const content = this.parentNode.querySelector('.collapsible-content');
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                content.classList.remove('open');
-                content.classList.add('closed');
-                this.innerHTML = 'Expand <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">'; // Change text to Expand
-            } else {
-                content.style.display = "block";
-                content.classList.remove('closed');
-                content.classList.add('open');
-                this.innerHTML = 'Collapse <img src="path_to_your_icon/arrow-icon.svg" style="width: 16px; vertical-align: middle;">'; // Change text to Collapse
-            }
-        });
+    document.querySelector('.expand-button').addEventListener('click', function() {
+        const content = this.parentNode.querySelector('.collapsible-content');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            content.classList.remove('open');
+            content.classList.add('closed');
+            this.innerHTML = 'Open Code Review'; // Change text to Open Code Review
+        } else {
+            content.style.display = "block";
+            content.classList.remove('closed');
+            content.classList.add('open');
+            this.innerHTML = 'Close Code Review'; // Change text to Close Code Review
+        }
     });
 </script>
 

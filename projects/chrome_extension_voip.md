@@ -4,13 +4,8 @@ title: "VoIP Chrome Extension with CRM Integration"
 date: 2024-09-27
 categories: projects
 ---
-
-
-
-## Code Deep Dive & Insights
-
 <details>
-<summary>Click Me - Code Deep Dive</summary>
+<summary><strong>Code Deep Dive & Insights -- Expand Me</strong></summary>
 
 ### 1. **Regular Expression for Phone Numbers**
 
@@ -144,7 +139,6 @@ observer.observe(document.body, { childList: true, subtree: true });
 - The use of regex, DOM manipulation, and event handling demonstrates core JavaScript concepts and the power of browser extensions in enhancing user interactions.
 
 </details>
-
 
 # VoIP Chrome Extension with CRM Integration
 

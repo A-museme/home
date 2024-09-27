@@ -6,17 +6,18 @@ categories: projects
 ---
 
 
-# VoIP Chrome Extension with CRM Integration
 
 ## Code Deep Dive & Insights
 
 <details>
-<summary>Click to expand!</summary>
+<summary>Click Me - Code Deep Dive</summary>
+
 ### 1. **Regular Expression for Phone Numbers**
 
 ```javascript
 const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
 ```
+
 - **What It Does**: This line defines a **regular expression (regex)** to identify phone numbers in various common formats. 
 - **Explanation**:
   - `\+?`: Matches an optional plus sign (for international codes).
@@ -33,10 +34,12 @@ const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
 ```javascript
 let processedElements = new Set();
 ```
+
 - **What It Does**: This line initializes a **Set** to keep track of elements that have already been processed.
 - **Why It Matters**: It prevents duplicate buttons from being added next to phone numbers that have already been tagged.
 
 ### 3. **Parsing Visible Text Content**
+
 ```javascript
 function parseVisibleTextContent() {
     let textNodes = [];
@@ -53,6 +56,7 @@ function parseVisibleTextContent() {
     return textNodes;
 }
 ```
+
 - **What It Does**: This function uses a **TreeWalker** to find all visible text nodes in the document.
 - **Key Concepts**:
   - `document.createTreeWalker`: Creates a walker to traverse nodes in the DOM.
@@ -61,16 +65,19 @@ function parseVisibleTextContent() {
 - **Outcome**: The function returns an array of text nodes that are currently visible on the page.
 
 ### 4. **Check for Existing Phone Buttons**
+
 ```javascript
 function phoneNumberAlreadyTagged(node, phoneNumber) {
     const nextSibling = node.nextSibling;
     return nextSibling && nextSibling.nodeName === "BUTTON" && nextSibling.title.includes(phoneNumber);
 }
 ```
+
 - **What It Does**: This function checks if there is already a button next to the detected phone number.
 - **Why It Matters**: It ensures we don’t add multiple buttons next to the same phone number.
 
 ### 5. **Creating the Phone Button**
+
 ```javascript
 function createPhoneButtonInline(phoneNumber, node) {
     if (!node || processedElements.has(node)) return;
@@ -86,6 +93,7 @@ function createPhoneButtonInline(phoneNumber, node) {
     console.log(`[PhoneDetection] Injected button for: ${phoneNumber}`);
 }
 ```
+
 - **What It Does**: This function creates and injects a button next to the detected phone number in the DOM.
 - **Key Concepts**:
   - **Create Elements**: Uses `document.createElement` to create a `span` and an `img` for the button.
@@ -94,6 +102,7 @@ function createPhoneButtonInline(phoneNumber, node) {
   - **Functionality**: On clicking the button, it sends a message to the Chrome extension to handle a phone lead.
 
 ### 6. **Detecting Phone Numbers**
+
 ```javascript
 function detectPhoneNumbers() {
     console.log("[PhoneDetection] Scanning for phone numbers...");
@@ -109,12 +118,14 @@ function detectPhoneNumbers() {
     console.log("[PhoneDetection] Phone number scan complete.");
 }
 ```
+
 - **What It Does**: This function scans for phone numbers in the text nodes and creates buttons for them.
 - **Key Concepts**:
   - **Logging**: Uses `console.log` to indicate the start and end of the scanning process.
   - **Match Phone Numbers**: Uses the regex to find and process detected phone numbers.
 
 ### 7. **Initial Scan and Mutation Observer**
+
 ```javascript
 detectPhoneNumbers();
 
@@ -123,6 +134,7 @@ const observer = new MutationObserver(mutations => {
 });
 observer.observe(document.body, { childList: true, subtree: true });
 ```
+
 - **What It Does**: The initial call to `detectPhoneNumbers()` scans the page for phone numbers when the extension is loaded. 
 - **MutationObserver**: This observes changes in the DOM (e.g., when new content is loaded) and triggers a re-scan to find newly added phone numbers.
 - **Why It Matters**: This ensures that dynamically loaded content (like AJAX calls) is also checked for phone numbers.
@@ -130,6 +142,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 ### Summary
 - This code allows a Chrome extension to detect phone numbers on a webpage, injects clickable buttons next to them, and manages interactions with those buttons. 
 - The use of regex, DOM manipulation, and event handling demonstrates core JavaScript concepts and the power of browser extensions in enhancing user interactions.
+
 </details>
 
 

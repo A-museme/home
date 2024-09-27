@@ -1,4 +1,4 @@
-## **Projects**
+## **2024 Projects**
 
 ### **VoIP Chrome Extension with CRM Integration**  
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Chrome Extensions API](https://img.shields.io/badge/Chrome_Extensions_API-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white) ![Twilio API](https://img.shields.io/badge/Twilio_API-F22F46?style=for-the-badge&logo=twilio&logoColor=white) ![HTML/CSS](https://img.shields.io/badge/HTML/CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![OAuth](https://img.shields.io/badge/OAuth-3F9F7F?style=for-the-badge&logo=oauth&logoColor=white) ![Google APIs](https://img.shields.io/badge/Google_APIs-4285F4?style=for-the-badge&logo=google&logoColor=white)

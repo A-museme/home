@@ -5,64 +5,12 @@ date: 2024-09-27
 categories: projects
 ---
 
-<details>
-    <summary>Click to expand!</summary>
-
-    ```markdown
-    ### 1. **Regular Expression for Phone Numbers**
-    ```
-    ```javascript
-    const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
-    ```
-    - **What It Does**: This line defines a **regular expression (regex)** to identify phone numbers in various common formats.
-    - **Explanation**:
-        - `\+?`: Matches an optional plus sign (for international codes).
-        - `1[-.\s]?`: Matches the country code for the U.S. (optional) followed by a separator (dash, dot, or space).
-        - `\(?\d{3}\)?`: Matches an area code (3 digits), which can be enclosed in parentheses.
-        - `[-.\s]`: Matches a separator (dash, dot, or space).
-        - `\d{3}`: Matches the next 3 digits.
-        - `[-.\s]`: Matches another separator.
-        - `\d{4}`: Matches the final 4 digits of the phone number.
-    - **Result**: The regex can match numbers like `123-456-7890`, `(123) 456-7890`, and `+1 123 456 7890`.
-
-    ```markdown
-    ### 2. **Set to Track Processed Elements**
-    ```
-    ```javascript
-    let processedElements = new Set();
-    ```
-    - **What It Does**: This line initializes a **Set** to keep track of elements that have already been processed.
-    - **Why It Matters**: It prevents duplicate buttons from being added next to phone numbers that have already been tagged.
-
-    ```markdown
-    ### 3. **Parsing Visible Text Content**
-    ```
-    ```javascript
-    function parseVisibleTextContent() {
-        let textNodes = [];
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-            acceptNode(node) {
-                return node.parentNode.offsetParent !== null ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-            }
-        });
-
-        let node;
-        while ((node = walker.nextNode())) {
-            textNodes.push(node);
-        }
-        return textNodes;
-    }
-    ```
-    - **What It Does**: This function uses a **TreeWalker** to find all visible text nodes in the document.
-    - **Key Concepts**:
-        - `document.createTreeWalker`: Creates a walker to traverse nodes in the DOM.
-        - `NodeFilter.SHOW_TEXT`: Filters to show only text nodes.
-        - `acceptNode`: Checks if the parent of the node is visible (i.e., `offsetParent !== null`).
-    - **Outcome**: The function returns an array of text nodes that are currently visible on the page.
-
-</details>
-
-
+---
+layout: post
+title: "VoIP Chrome Extension with CRM Integration"
+date: 2024-09-27
+categories: projects
+---
 # VoIP Chrome Extension with CRM Integration
 
 **Technologies Used:**  
@@ -81,7 +29,10 @@ Developed a custom Google Chrome extension to streamline communication processes
 
 ---
 
-## Process
+<details>
+<summary>Research and Planning Process (Expand Me) </summary>
+
+
 
 ### Research & Planning
 
@@ -106,7 +57,124 @@ Developed a custom Google Chrome extension to streamline communication processes
 - Released the extension for internal sales team usage. Gathered feedback on the UI, functionality, and efficiency, which led to further optimization of call logs and lead creation processes.
 - Ensured compliance with data security standards, particularly around handling customer data and CRM integration.
 
----
+</details>
 
-This project provided significant value by reducing manual data entry, improving workflow efficiency, and seamlessly integrating VoIP services within the sales process.
-s
+---
+### Conceptual Introduction + Code Breakdown
+- This code allows a Chrome extension to detect phone numbers on a webpage, injects clickable buttons next to them, and manages interactions with those buttons. 
+- The use of regex, DOM manipulation, and event handling demonstrates core JavaScript concepts and the power of browser extensions in enhancing user interactions.
+
+### 1. **Regular Expression for Phone Numbers**
+```javascript
+const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
+```
+- **What It Does**: This line defines a **regular expression (regex)** to identify phone numbers in various common formats. 
+- **Explanation**:
+  - `\+?`: Matches an optional plus sign (for international codes).
+  - `1[-.\s]?`: Matches the country code for the U.S. (optional) followed by a separator (dash, dot, or space).
+  - `\(?\d{3}\)?`: Matches an area code (3 digits), which can be enclosed in parentheses.
+  - `[-.\s]`: Matches a separator (dash, dot, or space).
+  - `\d{3}`: Matches the next 3 digits.
+  - `[-.\s]`: Matches another separator.
+  - `\d{4}`: Matches the final 4 digits of the phone number.
+- **Result**: The regex can match numbers like `123-456-7890`, `(123) 456-7890`, and `+1 123 456 7890`.
+
+### 2. **Set to Track Processed Elements**
+```javascript
+let processedElements = new Set();
+```
+- **What It Does**: This line initializes a **Set** to keep track of elements that have already been processed.
+- **Why It Matters**: It prevents duplicate buttons from being added next to phone numbers that have already been tagged.
+
+### 3. **Parsing Visible Text Content**
+```javascript
+function parseVisibleTextContent() {
+    let textNodes = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+        acceptNode(node) {
+            return node.parentNode.offsetParent !== null ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        }
+    });
+
+    let node;
+    while ((node = walker.nextNode())) {
+        textNodes.push(node);
+    }
+    return textNodes;
+}
+```
+- **What It Does**: This function uses a **TreeWalker** to find all visible text nodes in the document.
+- **Key Concepts**:
+  - `document.createTreeWalker`: Creates a walker to traverse nodes in the DOM.
+  - `NodeFilter.SHOW_TEXT`: Filters to show only text nodes.
+  - `acceptNode`: Checks if the parent of the node is visible (i.e., `offsetParent !== null`).
+- **Outcome**: The function returns an array of text nodes that are currently visible on the page.
+
+### 4. **Check for Existing Phone Buttons**
+```javascript
+function phoneNumberAlreadyTagged(node, phoneNumber) {
+    const nextSibling = node.nextSibling;
+    return nextSibling && nextSibling.nodeName === "BUTTON" && nextSibling.title.includes(phoneNumber);
+}
+```
+- **What It Does**: This function checks if there is already a button next to the detected phone number.
+- **Why It Matters**: It ensures we don’t add multiple buttons next to the same phone number.
+
+### 5. **Creating the Phone Button**
+```javascript
+function createPhoneButtonInline(phoneNumber, node) {
+    if (!node || processedElements.has(node)) return;
+
+    const span = document.createElement("span");
+    // ... [Styling code]
+    
+    const svgButton = document.createElement("img");
+    svgButton.src = chrome.runtime.getURL("icon.svg");
+    // ... [Button event listeners and styling]
+    
+    processedElements.add(node);
+    console.log(`[PhoneDetection] Injected button for: ${phoneNumber}`);
+}
+```
+- **What It Does**: This function creates and injects a button next to the detected phone number in the DOM.
+- **Key Concepts**:
+  - **Create Elements**: Uses `document.createElement` to create a `span` and an `img` for the button.
+  - **Styling**: Applies CSS styles to position the button relative to the phone number.
+  - **Event Listeners**: Sets up `mouseover` and `mouseout` events to change the button’s appearance.
+  - **Functionality**: On clicking the button, it sends a message to the Chrome extension to handle a phone lead.
+
+### 6. **Detecting Phone Numbers**
+```javascript
+function detectPhoneNumbers() {
+    console.log("[PhoneDetection] Scanning for phone numbers...");
+    const textNodes = parseVisibleTextContent();
+    textNodes.forEach(node => {
+        const matches = node.nodeValue.match(phoneRegex);
+        if (matches) {
+            matches.forEach(phoneNumber => {
+                createPhoneButtonInline(phoneNumber.trim(), node);
+            });
+        }
+    });
+    console.log("[PhoneDetection] Phone number scan complete.");
+}
+```
+- **What It Does**: This function scans for phone numbers in the text nodes and creates buttons for them.
+- **Key Concepts**:
+  - **Logging**: Uses `console.log` to indicate the start and end of the scanning process.
+  - **Match Phone Numbers**: Uses the regex to find and process detected phone numbers.
+
+### 7. **Initial Scan and Mutation Observer**
+```javascript
+detectPhoneNumbers();
+
+const observer = new MutationObserver(mutations => {
+    detectPhoneNumbers();
+});
+observer.observe(document.body, { childList: true, subtree: true });
+```
+- **What It Does**: The initial call to `detectPhoneNumbers()` scans the page for phone numbers when the extension is loaded. 
+- **MutationObserver**: This observes changes in the DOM (e.g., when new content is loaded) and triggers a re-scan to find newly added phone numbers.
+- **Why It Matters**: This ensures that dynamically loaded content (like AJAX calls) is also checked for phone numbers.
+
+

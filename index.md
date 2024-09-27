@@ -1,79 +1,39 @@
-# Portfolio
+## **Projects**
 
-Welcome to my portfolio! Below is a collection of my featured projects, skills, and contact information.
+### **VoIP Chrome Extension with CRM Integration**  
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Chrome Extensions API](https://img.shields.io/badge/Chrome_Extensions_API-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white) ![Twilio API](https://img.shields.io/badge/Twilio_API-F22F46?style=for-the-badge&logo=twilio&logoColor=white) ![HTML/CSS](https://img.shields.io/badge/HTML/CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![OAuth](https://img.shields.io/badge/OAuth-3F9F7F?style=for-the-badge&logo=oauth&logoColor=white) ![Google APIs](https://img.shields.io/badge/Google_APIs-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
----
+**Overview**:  
+Developed a custom Google Chrome extension that streamlines communication processes by integrating VoIP functionality directly into the browser. The extension allows users to make calls through their Twilio account using `tel:` links on web pages, automatically adds leads to the CRM if they don’t already exist, and automates data entry for call logging.
 
-## Featured Projects
-
-### 1. SaaS Application Development
-> **Building scalable SaaS platforms** using modern tools like **Node.js** and **AWS**.
->
-> - Focus: Backend, Cloud Infrastructure, and Security
-> - Technologies:
->   ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
->   ![AWS](https://img.shields.io/badge/-AWS-FF9900?logo=amazon-aws&logoColor=white)
->   ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-
-[View Project](#)
+- [x] Chrome Extension integration  
+- [x] VoIP calls with Twilio API  
+- [x] CRM data automation  
+- [x] Google APIs integration
 
 ---
 
-### 2. AI Workflow Automation
-> **Automating business processes** using **AI-driven agents**.
->
-> - Focus: Workflow Optimization, AI Agents
-> - Technologies:
->   ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
->   ![OpenAI](https://img.shields.io/badge/-OpenAI-412991?logo=openai&logoColor=white)
->   ![Zapier](https://img.shields.io/badge/-Zapier-FF4A00?logo=zapier&logoColor=white)
+### **Sales Data Augmentation via Web Scraping for Targeted Outreach**  
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?style=for-the-badge&logo=puppeteer&logoColor=white) ![Cheerio](https://img.shields.io/badge/Cheerio-F7B500?style=for-the-badge&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) ![REST APIs](https://img.shields.io/badge/REST_APIs-0052CC?style=for-the-badge&logo=rest-api&logoColor=white)
 
-[View Project](#)
+**Overview**:  
+Built a web scraping system using Node.js, Puppeteer, and public datasets to augment sales data. This system enhances sales efforts by identifying potential customers already using similar technologies, enabling highly targeted outreach that improves conversion rates and accelerates growth.
 
----
-
-### 3. ML Model Deployment
-> **Deploying machine learning models** for predictive analytics.
->
-> - Focus: Model Training, Cloud Deployment
-> - Technologies:
->   ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
->   ![AWS SageMaker](https://img.shields.io/badge/-AWS_SageMaker-232F3E?logo=amazon-aws&logoColor=white)
-
-[View Project](#)
+- [x] Web scraping for relevant data  
+- [x] Data enhancement for sales targeting  
+- [x] REST API integration for real-time updates  
+- [x] MongoDB for large dataset management
 
 ---
 
-## Skills & Tools
+### **Custom CRM Modules for LLM-Based Summarization and Automated Follow-Up**  
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![OpenAI API](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white) ![Google Apps Script](https://img.shields.io/badge/Google_Apps_Script-34A853?style=for-the-badge&logo=google&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 
-- **Languages:**
-  ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
-  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white)
-  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white)
+**Overview**:  
+Developed custom CRM modules leveraging large language models (LLMs) to automate summarization of contact data. These modules enable personalized email drafting based on context-driven data from the CRM and provide an interactive interface to engage with CRM data directly on contact pages, enhancing customer relationship management.
 
-- **Frameworks & Libraries:**
-  ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
-  ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?logo=tensorflow&logoColor=white)
-  ![Express.js](https://img.shields.io/badge/-Express.js-000000?logo=express&logoColor=white)
-
-- **Cloud Services:**
-  ![AWS](https://img.shields.io/badge/-AWS-FF9900?logo=amazon-aws&logoColor=white)
-  ![Google Cloud](https://img.shields.io/badge/-Google_Cloud-4285F4?logo=google-cloud&logoColor=white)
-  ![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-
-- **Tools:**
-  ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white)
-  ![Salesforce](https://img.shields.io/badge/-Salesforce-00A1E0?logo=salesforce&logoColor=white)
-  ![HubSpot](https://img.shields.io/badge/-HubSpot-FF7A59?logo=hubspot&logoColor=white)
-
----
-
-## Contact
-
-Feel free to reach out!
-
-- **Email:** [your.email@example.com](mailto:your.email@example.com)
-- **LinkedIn:** [Your LinkedIn](https://linkedin.com)
-- **GitHub:** [Your GitHub](https://github.com)
+- [x] LLM-based data summarization  
+- [x] Automated follow-up email generation  
+- [x] Integration with OpenAI and Google Apps Script  
+- [x] AI-driven insights for CRM improvement  
 

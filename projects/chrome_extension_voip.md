@@ -11,8 +11,6 @@ categories: projects
     </h2>
     <div class="collapsible-content" style="display: none;">
         <p>
-        Sure! Let's break down the provided JavaScript code step by step in an educational manner, ideal for someone new to programming. We'll highlight the key concepts and functionalities.
-
 ### 1. **Regular Expression for Phone Numbers**
 ```javascript
 const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;

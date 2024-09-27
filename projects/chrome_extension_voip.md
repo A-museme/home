@@ -5,14 +5,6 @@ date: 2024-09-27
 categories: projects
 ---
 
----
-layout: post
-title: "VoIP Chrome Extension with CRM Integration"
-date: 2024-09-27
-categories: projects
----
-# VoIP Chrome Extension with CRM Integration
-
 **Technologies Used:**  
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) ![Chrome Extensions API](https://img.shields.io/badge/-Chrome_Extensions_API-4285F4?logo=google-chrome&logoColor=white) ![Twilio API](https://img.shields.io/badge/-Twilio_API-F22F46?logo=twilio&logoColor=white) ![HTML/CSS](https://img.shields.io/badge/-HTML/CSS-E34F26?logo=html5&logoColor=white) ![OAuth](https://img.shields.io/badge/-OAuth-4285F4?logo=oauth&logoColor=white) ![Web Scraping](https://img.shields.io/badge/-Web_Scraping-239120?logo=python&logoColor=white) ![Google APIs](https://img.shields.io/badge/-Google_APIs-4285F4?logo=google&logoColor=white)
 

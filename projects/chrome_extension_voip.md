@@ -12,8 +12,8 @@ categories: projects
 
 <details>
 <summary>Click to expand!</summary>
-
 ### 1. **Regular Expression for Phone Numbers**
+
 ```javascript
 const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
 ```
@@ -29,6 +29,7 @@ const phoneRegex = /(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}/g;
 - **Result**: The regex can match numbers like `123-456-7890`, `(123) 456-7890`, and `+1 123 456 7890`.
 
 ### 2. **Set to Track Processed Elements**
+
 ```javascript
 let processedElements = new Set();
 ```

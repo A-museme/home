@@ -42,3 +42,39 @@
 > - **Email:** your.email@example.com  
 > - **LinkedIn:** [Your LinkedIn](https://www.linkedin.com)  
 > - **Twitter:** [Your Twitter](https://twitter.com)
+
+### Projects
+
+<div style="display: flex; justify-content: space-between;">
+
+<div style="flex: 1; margin-right: 10px;">
+#### Project 1: SaaS Application Development
+> "Building scalable SaaS products using modern tech stacks."
+>
+> - Focus: Backend, Cloud Infrastructure, Security
+> - Tools: Node.js, AWS, Docker
+>
+> [View More](#)
+</div>
+
+<div style="flex: 1; margin-right: 10px;">
+#### Project 2: AI Workflow Automation
+> "Automating business processes with AI-driven agents."
+>
+> - Focus: AI Agents, Workflow Efficiency
+> - Tools: Python, OpenAI, Zapier
+>
+> [View More](#)
+</div>
+
+<div style="flex: 1;">
+#### Project 3: Machine Learning Model Deployment
+> "Deploying machine learning models at scale for predictive analytics."
+>
+> - Focus: Model Training, Cloud Deployment
+> - Tools: TensorFlow, AWS Sagemaker
+>
+> [View More](#)
+</div>
+
+</div>

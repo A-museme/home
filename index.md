@@ -11,6 +11,9 @@ Developed a custom Google Chrome extension that streamlines communication proces
 - [x] CRM data automation  
 - [x] Google APIs integration
 
+[![Learn More](https://img.shields.io/badge/Learn%20More-00FF00?style=for-the-badge&logoColor=white)](https://a-museme.github.io/home/projects/chrome_extension_voip)
+
+
 ---
 
 ### **Sales Data Augmentation via Web Scraping for Targeted Outreach**  

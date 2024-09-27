@@ -27,6 +27,9 @@ Built a web scraping system using Node.js, Puppeteer, and public datasets to aug
 - [x] REST API integration for real-time updates  
 - [x] MongoDB for large dataset management
 
+[![Learn More](https://img.shields.io/badge/Learn%20More-00FF00?style=for-the-badge&logoColor=white)](https://a-museme.github.io/home/projects/web_scraping_01)
+
+
 ---
 
 ### **Custom CRM Modules for LLM-Based Summarization and Automated Follow-Up**  
@@ -39,4 +42,6 @@ Developed custom CRM modules leveraging large language models (LLMs) to automate
 - [x] Automated follow-up email generation  
 - [x] Integration with OpenAI and Google Apps Script  
 - [x] AI-driven insights for CRM improvement  
+
+[![Learn More](https://img.shields.io/badge/Learn%20More-00FF00?style=for-the-badge&logoColor=white)](https://a-museme.github.io/home/projects/crm_ai)
 

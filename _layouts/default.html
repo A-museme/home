@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-{% seo %}
+    {% seo %}
   </head>
 
   <body>
@@ -19,12 +19,16 @@
         </a>
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
-        <section id="downloads">
-          {% if site.show_downloads %}
-            <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
-            <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
-          {% endif %}
-          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        <section id="navigation">
+          <a href="{{ '/' | relative_url }}" class="btn">Home</a>
+          <a href="{{ '/about' | relative_url }}" class="btn">About</a>
+          <a href="{{ '/contact' | relative_url }}" class="btn">Contact</a>
+          <a href="https://www.youtube.com/your-channel" class="btn">
+            <img src="{{ '/assets/images/youtube-logo.png' | relative_url }}" alt="YouTube" class="logo"> YouTube
+          </a>
+          <a href="https://www.linkedin.com/in/your-profile" class="btn">
+            <img src="{{ '/assets/images/linkedin-logo.png' | relative_url }}" alt="LinkedIn" class="logo"> LinkedIn
+          </a>
         </section>
       </div>
     </header>

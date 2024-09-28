@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     {% include head-custom.html %}
 
     {% seo %}
@@ -20,14 +21,20 @@
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
         <section id="navigation">
-          <a href="{{ '/' | relative_url }}" class="btn">Home</a>
-          <a href="{{ '/about' | relative_url }}" class="btn">About</a>
-          <a href="{{ '/contact' | relative_url }}" class="btn">Contact</a>
+          <a href="{{ '/' | relative_url }}" class="btn">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="{{ '/about' | relative_url }}" class="btn">
+            <i class="fas fa-info-circle"></i> About
+          </a>
+          <a href="{{ '/contact' | relative_url }}" class="btn">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
           <a href="https://www.youtube.com/your-channel" class="btn">
-            <img src="{{ '/assets/images/youtube-logo.png' | relative_url }}" alt="YouTube" class="logo"> YouTube
+            <i class="fab fa-youtube"></i> YouTube
           </a>
           <a href="https://www.linkedin.com/in/your-profile" class="btn">
-            <img src="{{ '/assets/images/linkedin-logo.png' | relative_url }}" alt="LinkedIn" class="logo"> LinkedIn
+            <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </section>
       </div>

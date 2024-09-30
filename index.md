@@ -1,5 +1,21 @@
 ## **2024 Projects**
 
+### **Discord Admin Bot**  
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white) ![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
+  
+**Overview**:  
+This bot integrates OpenAI's language models with Discord to provide a smart, interactive tool for server admins and users.  
+  
+- [x] AI-Powered Conversations: Engage in context-aware dialogues.  
+- [x] Modular Command System: Easily extend functionality.  
+- [x] Persistent Chat History: SQLite-backed conversation context.  
+- [x] Customizable Prefix: Adjust the bot's trigger to fit your server.  
+- [x] Detailed Logging: Optional logging for analysis and troubleshooting.  
+  
+[![Learn More](https://img.shields.io/badge/Learn%20More-00FF00?style=for-the-badge&logoColor=white)](https://a-museme.github.io/home/projects/discord_admin_bot)
+
+---
+
 ### **VoIP Chrome Extension with CRM Integration**  
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![Chrome Extensions API](https://img.shields.io/badge/Chrome_Extensions_API-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white) ![Twilio API](https://img.shields.io/badge/Twilio_API-F22F46?style=for-the-badge&logo=twilio&logoColor=white) ![HTML/CSS](https://img.shields.io/badge/HTML/CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![OAuth](https://img.shields.io/badge/OAuth-3F9F7F?style=for-the-badge&logo=oauth&logoColor=white) ![Google APIs](https://img.shields.io/badge/Google_APIs-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
